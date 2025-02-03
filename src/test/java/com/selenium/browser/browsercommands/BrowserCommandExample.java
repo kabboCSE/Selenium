@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class BrowserCommandExample {
 
 
-    String url = "https://www.startech.com.bd/";
+    String url = "https://maven.apache.org/download.cgi";
     WebDriver driver;
 
     @BeforeSuite
@@ -32,7 +32,10 @@ public class BrowserCommandExample {
             System.out.println("Current Url not passed");
         }
     }
-
+@Test
+    public void getPageSource() throws InterruptedException  {
+        System.out.println(driver.getPageSource());
+    }
     @AfterSuite
     public void quit() {
 
